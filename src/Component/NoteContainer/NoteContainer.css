@@ -1,0 +1,11 @@
+.note-container {
+  height: 100%;
+}
+
+.note-container_notes {
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow-y: scroll;
+}
