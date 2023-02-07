@@ -11,7 +11,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height: 0;
   align-items: center;
+  transition: 300ms;
+}
+.sidebar_list_active {
+  height: 300px;
 }
 .sidebar_list_item {
   border-radius: 50%;

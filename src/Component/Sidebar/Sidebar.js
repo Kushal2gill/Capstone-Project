@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import plus from "../../images/plusicon.png";
 import "./Sidebar.css";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   const color = ["#fe9b72", "#fec972", "#00d4fe", "#b693fd", "#e4ee91"];
+
+  const [listOpen, setListOpen] = useState(false);
   return (
     <div className="sidebar">
-      <img src={plus} alt="add" />
-      <ul className="sidebar_list">
+      <img src={plus} alt="add" onClick={() => setListOpen(!listOpen)} />
+      <ul className={`sidebar_list ${listOpen ? "sidebar_list_active" : ""}`}>
         {color.map((item, index) => (
           <li
             key={index}
             className="sidebar_list_item"
             style={{ backgroundColor: item }}
+            onClick={() => props.addNote(item)}
           />
         ))}
       </ul>

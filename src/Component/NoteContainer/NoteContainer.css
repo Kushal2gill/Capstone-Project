@@ -3,9 +3,10 @@
 }
 
 .note-container_notes {
-  height: 400px;
+  height: 600px;
+  width: 1370px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 97px;
   overflow-y: scroll;
 }
